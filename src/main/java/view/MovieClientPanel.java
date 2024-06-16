@@ -28,10 +28,8 @@ public class MovieClientPanel extends JPanel {
     private JPanel showTimeFilterPanel;
     private JPanel movieListPanel;
     private JScrollPane movieListScrollPane;
-    private String startDateString = "2024-06-12";
+    private String startDateString = "2024-06-17";
     private JButton selectedButton;
-    
-   
     
     public MovieClientPanel() {
         initComponents();

@@ -15,19 +15,23 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
 public class SearchTextField extends JTextField {
-    private TableRowSorter<TableModel> rowSorter;
-    private JTextField searchTextField;
+    private final  TableRowSorter<TableModel> rowSorter;
+    private static final boolean isFeatureAvailable = false;
     
     public SearchTextField(TableRowSorter<TableModel> rowSorter) {
         this.rowSorter = rowSorter;
-        this.searchTextField = this;
         initComponent();
     }
     
     private void initComponent() {
         setText("Search");
         setPreferredSize(new Dimension(180, 30));
-        addSearchFunctionality(this);
+        if (!isFeatureAvailable) {
+            setEnabled(false); // Disable the search text field
+            setToolTipText("Search functionality is currently unavailable.");
+        } else {
+            addSearchFunctionality(this);
+        }
     }
     
     private void addSearchFunctionality(JTextField searchTextField) {
@@ -49,12 +53,12 @@ public class SearchTextField extends JTextField {
         });
         
         // Add DocumentListener to filter table based on search text
-        searchTextField.getDocument().addDocumentListener(new SearchDocumentListener(this.rowSorter, searchTextField)); 
+        searchTextField.getDocument().addDocumentListener(new SearchDocumentListener(this.rowSorter, this)); 
     }
 
     private static class SearchDocumentListener implements DocumentListener {
-        private TableRowSorter<TableModel> rowSorter;
-        private JTextField searchTextField;
+        private final TableRowSorter<TableModel> rowSorter;
+        private final JTextField searchTextField;
         
         public SearchDocumentListener(TableRowSorter<TableModel> rowSorter, JTextField searchTextField) {
             this.rowSorter = rowSorter;
@@ -78,6 +82,7 @@ public class SearchTextField extends JTextField {
 
         private void search() {
             String text = searchTextField.getText().trim();
+        //    System.out.println("Search: " + text);
             if (text.trim().length() == 0 || text.equals("Search")) {
                 rowSorter.setRowFilter(null);
             } else {

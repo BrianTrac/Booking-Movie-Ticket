@@ -4,10 +4,13 @@
  */
 package view;
 
+import controller.DataStore;
 import java.awt.BorderLayout;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
+import model.Customer;
 
 /**
  *
@@ -17,6 +20,7 @@ public class SeatMapClient extends JFrame {
     private final String id;
     private JPanel mainPanel;
     private JPanel containerPanel;
+    private Observer observer;
     
     public SeatMapClient(String id) {
         this.id = id;
@@ -29,11 +33,27 @@ public class SeatMapClient extends JFrame {
         mainPanel = new SeatGridClientPanel(id, true);    
         containerPanel.add(mainPanel, BorderLayout.CENTER);
         
+        observer = (Observer) mainPanel;
+        Main.getSocketClientController().addObserver(observer);
+        
+        // Get Customer Name
+        Customer customer = DataStore.getCustomerByCustomerId(MainScreenClientFrame.customerId);
+        String customerName = customer.getName();
+        
         add(containerPanel);
-        setTitle("Seat Map Client");
+        setTitle("Client Seat Map: " + customerName);
         setSize(800, 645);
         setLocationRelativeTo(null);
         setVisible(true);
+        
+         // Add a window listener to handle window closing event
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                Main.getSocketClientController().removeObserver(observer);
+                dispose();
+            }
+        });
     }
     
     public static String calSeatId(String text) {

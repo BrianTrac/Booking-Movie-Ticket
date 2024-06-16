@@ -10,6 +10,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import model.Customer;
 
 /**
  *
@@ -21,6 +22,9 @@ public class MainScreenClientFrame extends JFrame {
     public MainScreenClientFrame(String customerId) {
         this.customerId = customerId; 
         DataStore.loadData();
+        Customer customer = DataStore.getCustomerByCustomerId(customerId);
+        String customerName = customer.getName();
+        
         JTabbedPane tabbedPane = new JTabbedPane();
         MovieClientPanel movieClientPanel = new MovieClientPanel();
         HistoryClientPanel historyClientPanel = new HistoryClientPanel();
@@ -39,8 +43,10 @@ public class MainScreenClientFrame extends JFrame {
             }
         });
         
+        
+        
         add(tabbedPane);
-        setTitle("Main Client Frame");
+        setTitle("Client: " + customerName);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLocationRelativeTo(null);

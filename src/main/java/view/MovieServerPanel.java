@@ -11,6 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -29,7 +31,7 @@ import model.Session;
  *
  * @author DELL
  */
-public class MovieServerPanel extends JPanel {
+public class MovieServerPanel extends JPanel implements ServerDataObserver {
     private JScrollPane scrollPane;
     private JTable movieTable;
     private JTextField searchTextField;
@@ -58,7 +60,11 @@ public class MovieServerPanel extends JPanel {
         
         rowSorter = new TableRowSorter<>(movieTable.getModel());
         movieTable.setRowSorter(rowSorter);
-       
+        
+        // Set the comparator for the columns to sort numerically
+        rowSorter.setComparator(4, Comparator.comparingInt(o -> Integer.valueOf(o.toString())));
+        rowSorter.setComparator(5, Comparator.comparingDouble(o -> Double.valueOf(o.toString())));
+        
         searchTextField = new SearchTextField(rowSorter);
         
         add(searchTextField, gbc.setGrid(0, 0).setAnchor(GridBagConstraints.WEST).setInsets(20, 0, 10, 0));
@@ -88,6 +94,11 @@ public class MovieServerPanel extends JPanel {
         for (Session session : sessionList) {
             model.addRow(new Object[]{session.getId(), getMovie(session.getMovieId()).getTitle(), getMovie(session.getMovieId()).getGenre(), session.getDatetime(), calSessionDataMap.get(session.getId()).get(0), calSessionDataMap.get(session.getId()).get(1) });
         }
+        
+        rowSorter = new TableRowSorter<>(movieTable.getModel());
+        rowSorter.setComparator(4, Comparator.comparingInt(o -> Integer.valueOf(o.toString())));
+        rowSorter.setComparator(5, Comparator.comparingDouble(o -> Double.valueOf(o.toString())));
+        movieTable.setRowSorter(rowSorter);
     }
     
     private Movie getMovie(String movieId) {
@@ -117,5 +128,10 @@ public class MovieServerPanel extends JPanel {
                 }
             }
         });
+    }
+
+    @Override
+    public void updateServerData() {
+        SwingUtilities.invokeLater(this::loadMovieData);
     }
 }

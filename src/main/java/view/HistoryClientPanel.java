@@ -7,6 +7,7 @@ package view;
 import controller.DataStore;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.util.Comparator;
 import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -45,6 +46,7 @@ public class HistoryClientPanel extends JPanel {
         
         rowSorter = new TableRowSorter<>(historyTable.getModel());
         historyTable.setRowSorter(rowSorter);
+        rowSorter.setComparator(4, Comparator.comparingDouble(o -> Double.valueOf(o.toString())));
         
         searchTextField = new SearchTextField(rowSorter);
         
@@ -60,6 +62,8 @@ public class HistoryClientPanel extends JPanel {
         
         DefaultTableModel model = (DefaultTableModel) historyTable.getModel();
         model.setRowCount(0);
+        rowSorter.setComparator(4, Comparator.comparingDouble(o -> Double.valueOf(o.toString())));
+        
         
         for (Booking booking : historyBooking) {
             Session session = DataStore.getSessionBySessionId(booking.getSessionId());

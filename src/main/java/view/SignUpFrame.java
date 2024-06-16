@@ -4,7 +4,6 @@
  */
 package view;
 
-import controller.SignUpController;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -22,15 +21,13 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
-/**
- *
- * @author DELL
- */
-public class SignUpFrame extends JFrame{
+
+public class SignUpFrame extends JFrame implements Observer{
     private JLabel titleLabel, usernameLabel, passwordLabel, confirmPasswordLabel, phoneLabel, loginLinkLabel;
     private JTextField usernameTextField, phoneTextField;
     private JPasswordField passwordField, confirmPasswordField;
     private JButton createAccountButton;
+//    private static boolean signUpSuccess = false;
     
     public SignUpFrame() {
         initComponents();
@@ -91,8 +88,7 @@ public class SignUpFrame extends JFrame{
         loginLinkLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                dispose();
-                new LoginFrame().setVisible(true);
+                handleLoginLinkClick();
             }
         });
         
@@ -107,16 +103,44 @@ public class SignUpFrame extends JFrame{
     }
     
     private void handleSignUp() {
-        String username = usernameTextField.getText();
-        String password = new String(passwordField.getPassword());
-        String phone = phoneTextField.getText();
-        
-        boolean success = SignUpController.signUp(username, password, phone);
-        if (success) {
-            JOptionPane.showMessageDialog(SignUpFrame.this, "Sign up successfully!");
+        String username = usernameTextField.getText().trim();
+        String password = new String(passwordField.getPassword()).trim();
+        String confirmPassword = new String(confirmPasswordField.getPassword()).trim();
+        String phone = phoneTextField.getText().trim();
+
+        if (!password.equals(confirmPassword)) {
+            JOptionPane.showMessageDialog(SignUpFrame.this, "Mật khẩu không trùng khớp. Vui lòng nhập lại mật khẩu.");
+            return;
         }
-        else {
-            JOptionPane.showMessageDialog(SignUpFrame.this, "Your username already existed. Please chose another username");
+        
+    //    boolean success = SignUpController.signUp(username, password, phone);
+        Main.getSocketClientController().signUp(username, password, phone);
+         
+    }
+    
+    private void handleLoginLinkClick() {
+        this.dispose(); // Close current frame
+        LoginFrame loginFrame = new LoginFrame();
+        Main.getSocketClientController().addObserver(loginFrame);
+        loginFrame.setVisible(true);
+    }
+    
+    @Override
+    public void update(String eventType, Object result) {
+        if ("signUp".equals(eventType)) {
+            if (result instanceof Boolean && (Boolean) result) {
+                SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(SignUpFrame.this, "Đăng ký thành công!");
+                    this.dispose();
+                    LoginFrame loginFrame = new LoginFrame();
+                    Main.getSocketClientController().addObserver(loginFrame);
+                    loginFrame.setVisible(true);
+                });
+            } else {
+                SwingUtilities.invokeLater(() -> {
+                    JOptionPane.showMessageDialog(SignUpFrame.this, "Tên đăng nhập đã tồn tại.");
+                });
+            }
         }
     }
     

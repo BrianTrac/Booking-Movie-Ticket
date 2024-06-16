@@ -13,8 +13,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -25,7 +23,7 @@ import model.Session;
  *
  * @author DELL
  */
-public class SeatGridServerPanel extends JPanel{
+public class SeatGridServerPanel extends JPanel {
     private final String id;
     private JPanel screenPanel;
     private JPanel seatGridPanel;
@@ -109,30 +107,13 @@ public class SeatGridServerPanel extends JPanel{
                     }
                 }
                 
-                if (isEditable) {
-                    seatButtons[i][j].addActionListener(new ActionListener(){
-                        @Override
-                        public void actionPerformed(ActionEvent evt) {
-                            seatButtonActionPerformed(evt);
-                        }
-                    });
-                }
+                
                 gbc.setGrid(j, i);
                 seatGridPanel.add(seatButtons[i][j], gbc);
             }
         }
     }
-    
-    private void seatButtonActionPerformed(ActionEvent evt) {
-        JButton clickedButton = (JButton) evt.getSource();
-        selectedSeatList.add(SeatMapServer.calSeatId(clickedButton.getText()));
-        if (clickedButton.getBackground().equals(new Color(245,34,45)) || clickedButton.getBackground().equals(new Color(114,46,209))) {
-            clickedButton.setBackground(new Color(216,45,139));
-        } else {
-            //
-        }
-    }
-   
+     
     public static List<String> getSelectedSeatList() {
         return selectedSeatList;
     }
@@ -179,5 +160,5 @@ public class SeatGridServerPanel extends JPanel{
         Session session = DataStore.getSessionBySessionId(id);
         bookedSeatList = session.getBookedSeats();
     }
-    
+     
 }

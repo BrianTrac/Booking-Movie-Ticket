@@ -120,39 +120,93 @@ public class DataStore {
     
     public static boolean saveSessionList(String sessionId, List<String> bookedSeatList) {
         boolean flag = false;
-        
-        for (Session session : sessionList) {
-            if (session.getId().equals(sessionId)) {
-                List<String> bookedSeatDataList = session.getBookedSeats();
-                for (String bookedSeat : bookedSeatList) {
-                    bookedSeatDataList.add(bookedSeat);
+
+    //    List<String> newBookedSeats = new ArrayList<>(); // List to collect new booked seats
+
+        synchronized (sessionList) { // Synchronize on the sessionList to avoid concurrent modification
+            for (Session session : sessionList) {
+                if (session.getId().equals(sessionId)) {
+                //    List<String> bookedSeatDataList = session.getBookedSeats();
+                    
+                    session.setBookedSeats(bookedSeatList);
+                    // Collect the new seats to be added
+//                    for (String bookedSeat : bookedSeatList) {
+//                        newBookedSeats.add(bookedSeat);
+//                    }
+
+                    // Mark that we found and updated the session
+                    flag = true;
+                    break;
                 }
-                
-                session.setBookedSeats(bookedSeatDataList);
-                flag = true;
-                break;
             }
+
+            // Now add all new booked seats after iteration
+//            if (flag) {
+//                for (Session session : sessionList) {
+//                    if (session.getId().equals(sessionId)) {
+//                        session.getBookedSeats().addAll(newBookedSeats);
+//                        break;
+//                    }
+//                }
+//            }
         }
-        
+
+        // Save the updated sessionList to the file
         try {
             File dataFile = new File(FILENAME);
             Map<String, List<?>> dataMap = objectMapper.readValue(dataFile, new TypeReference<Map<String, List<?>>>() {});
-            
-            //Update the sessions list
+
+            // Update the sessions list
             dataMap.put("sessions", sessionList);
-            
+
             // Enable pretty printing
             objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
             objectMapper.writeValue(dataFile, dataMap);
-            
+
         } catch (IOException ex) {
             System.err.println("Error saving sessions to file: " + ex.getMessage());
             Logger.getLogger(DataStore.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
-        
+
         return flag;
     }
+
+//    public static boolean saveSessionList(String sessionId, List<String> bookedSeatList) {
+//        boolean flag = false;
+//        
+//        for (Session session : sessionList) {
+//            if (session.getId().equals(sessionId)) {
+//                List<String> bookedSeatDataList = session.getBookedSeats();
+//                for (String bookedSeat : bookedSeatList) {
+//                    bookedSeatDataList.add(bookedSeat);
+//                }
+//                
+//                session.setBookedSeats(bookedSeatDataList);
+//                flag = true;
+//                break;
+//            }
+//        }
+//        
+//        try {
+//            File dataFile = new File(FILENAME);
+//            Map<String, List<?>> dataMap = objectMapper.readValue(dataFile, new TypeReference<Map<String, List<?>>>() {});
+//            
+//            //Update the sessions list
+//            dataMap.put("sessions", sessionList);
+//            
+//            // Enable pretty printing
+//            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+//            objectMapper.writeValue(dataFile, dataMap);
+//            
+//        } catch (IOException ex) {
+//            System.err.println("Error saving sessions to file: " + ex.getMessage());
+//            Logger.getLogger(DataStore.class.getName()).log(Level.SEVERE, null, ex);
+//            return false;
+//        }
+//        
+//        return flag;
+//    }
     
     public static List<Customer> getCustomerList() {
         return customerList;

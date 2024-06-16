@@ -24,10 +24,6 @@ import javax.swing.border.Border;
 import model.Movie;
 import model.Session;
 
-/**
- *
- * @author DELL
- */
 public class MovieInfoClientPanel extends JPanel{
     private final String movieId;
     private final String date;
@@ -45,7 +41,7 @@ public class MovieInfoClientPanel extends JPanel{
     public MovieInfoClientPanel(String movieId, String date) {
         this.movieId = movieId;
         this.date = date;
-        System.out.println(movieId + " " + date);
+    //    System.out.println(movieId + " " + date);
         
         getMovieData();
         initComponents();

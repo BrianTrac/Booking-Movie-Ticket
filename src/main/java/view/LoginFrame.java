@@ -4,8 +4,6 @@
  */
 package view;
 
-import controller.DataStore;
-import controller.LoginController;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -22,9 +20,8 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
-import model.Customer;
 
-public class LoginFrame extends JFrame{
+public class LoginFrame extends JFrame implements Observer{
 
     private JLabel titleLabel ,usernameLabel, passwordLabel, signUpLinkLabel;
     private JTextField usernameTextField;
@@ -76,8 +73,7 @@ public class LoginFrame extends JFrame{
         signUpLinkLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                dispose();
-                new SignUpFrame().setVisible(true);
+                handleSignUpLinkClick();
             }
         });
         
@@ -92,23 +88,48 @@ public class LoginFrame extends JFrame{
     }
     
     private void handleLogin() {
-        String username = usernameTextField.getText();
-        String password = new String(passwordField.getPassword());
+        String username = usernameTextField.getText().trim();
+        String password = new String(passwordField.getPassword()).trim();
 
-        if (LoginController.login(username, password)) {
-            JOptionPane.showMessageDialog(LoginFrame.this, "Login successful", "Success", JOptionPane.INFORMATION_MESSAGE);
-            Customer customer = DataStore.getCustomerByCustomerName(username);
-            
-            dispose();
-            new MainScreenClientFrame(customer.getId()).setVisible(true);
-        } else {
-            int option = JOptionPane.showConfirmDialog(LoginFrame.this, "Account does not exist. Do you want to sign up?", "Account Not Found", JOptionPane.YES_NO_OPTION);
-            if (option == JOptionPane.YES_OPTION) {
-                dispose();
-                new SignUpFrame().setVisible(true);
+        Main.getSocketClientController().login(username, password);
+    }
+
+    private void handleSignUpLinkClick() {
+        this.dispose(); // Close current frame
+        SignUpFrame signUpFrame = new SignUpFrame();
+        Main.getSocketClientController().addObserver(signUpFrame);
+        signUpFrame.setVisible(true);
+    }
+    
+    @Override
+    public void update(String eventType, Object result) {
+
+        if ("login".equals(eventType)) {
+            if (result instanceof String) {
+                
+                String[] parts = ((String)result).split("&");
+                String status = parts[0];
+               
+                
+                switch ((String) status) {
+                    case "SUCCESS" -> SwingUtilities.invokeLater(() -> {
+                            JOptionPane.showMessageDialog(LoginFrame.this, "Đăng nhập thành công!");
+                            // Switch to the main application window
+                            String customerId = parts[1];
+                            new MainScreenClientFrame(customerId).setVisible(true);
+                            this.dispose();
+                        });
+                    case "ALREADY_LOGGED_IN" -> JOptionPane.showMessageDialog(LoginFrame.this, "Đã đăng nhập ở thiết bị khác!");
+                    case "INVALID_CREDENTIALS" -> JOptionPane.showMessageDialog(LoginFrame.this, "Tên đăng nhập hoặc mật khẩu không chính xác.");
+                    default -> {
+                    }
+                }
+            } else {
+                JOptionPane.showMessageDialog(LoginFrame.this, "ERROR!!!");                
             }
         }
     }
+
     
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new LoginFrame());

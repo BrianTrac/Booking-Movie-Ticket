@@ -30,7 +30,7 @@ import model.Session;
  *
  * @author DELL
  */
-public class SeatGridClientPanel extends JPanel{
+public class SeatGridClientPanel extends JPanel implements Observer {
     private final String sessionId;
     private JPanel screenPanel;
     private JPanel seatGridPanel;
@@ -51,6 +51,7 @@ public class SeatGridClientPanel extends JPanel{
     private JLabel paymentLabel;
     private double totalMoney = 0;
     private String selectedSeatNameString;
+   
     
     public SeatGridClientPanel(String sessionId, boolean isEditable) {
         this.sessionId = sessionId;
@@ -62,7 +63,11 @@ public class SeatGridClientPanel extends JPanel{
     }
     
     private void initComponents() {
- 
+       
+        selectedSeatList.clear();
+        selectedSeatNameList.clear();
+        selectedSeatButtonList.clear();
+        
         setLayout(new BorderLayout());
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setPreferredSize(new Dimension(800, 465));
@@ -190,6 +195,7 @@ public class SeatGridClientPanel extends JPanel{
             selectedSeatList.remove(SeatMapServer.calSeatId(clickedButton.getText()));
             selectedSeatNameList.remove(clickedButton.getText());
             totalMoney -= seat.getPrice();
+            totalMoney = Double.max(totalMoney, 0);
             
             updateSeatNumbersLabel();
             updatePaymentLabel();
@@ -242,8 +248,10 @@ public class SeatGridClientPanel extends JPanel{
     }
     
     private void getBookedSeatList() {
+        DataStore.loadData();
         Session session = DataStore.getSessionBySessionId(sessionId);
         bookedSeatList = session.getBookedSeats();
+        System.out.println("SeatGridClientPanel: " + bookedSeatList);
     }
     
      private void createTitlePanel() {
@@ -350,10 +358,10 @@ public class SeatGridClientPanel extends JPanel{
         if (response == JOptionPane.YES_OPTION) {
             // Handle the payment processing here
             System.out.println("Payment confirmed");
-            DataStore.saveBookingList(MainScreenClientFrame.customerId, sessionId, getSelectedSeatListString(), totalMoney);
-            DataStore.saveSessionList(sessionId, selectedSeatList);
-            
-            refreshPanel();
+        //    DataStore.saveBookingList(MainScreenClientFrame.customerId, sessionId, getSelectedSeatListString(), totalMoney);
+        //    DataStore.saveSessionList(sessionId, selectedSeatList); 
+        //    refreshPanel();
+            Main.getSocketClientController().bookSeat(MainScreenClientFrame.customerId, sessionId, getSelectedSeatListString(), totalMoney, selectedSeatList);
         } else if (response == JOptionPane.NO_OPTION) {
             // Handle the case where the user does not confirm the payment
             System.out.println("Payment cancelled");
@@ -380,5 +388,46 @@ public class SeatGridClientPanel extends JPanel{
         initComponents();
         revalidate();
         repaint();
+    }
+    
+    @Override
+    public void update(String evenType, Object result) {
+        
+        if ("bookSeat".equals(evenType)) {
+            if (result instanceof String) {
+                String[] parts = ((String) result).split("&");
+                String status = parts[1].trim();
+                System.out.println("bookSeat: " + status);
+                switch(status) {
+                    case "SUCCESS":
+                        SwingUtilities.invokeLater(() ->{
+                            JOptionPane.showMessageDialog(null, "Mua vé thành công");                            
+                        });
+                        refreshPanel();
+                        break;
+                    case "FAILED":
+                        String unavailableSeat = parts[2];
+                        System.out.println("Failed: " + unavailableSeat);
+                        SwingUtilities.invokeLater(() -> {
+                            JOptionPane.showMessageDialog(null, unavailableSeat + " đã được mua trước");
+                        });
+                        break;
+                    default:
+                        System.out.println("bookSeat error: " + result);
+                        break;
+                }
+            }
+        }
+        else if ("updateSeatMap".equals(evenType)) {
+            if (result instanceof String) {
+                String[] parts = ((String) result).split("&");
+                String sessionIdNeededToUpdate = parts[1].trim();
+                System.out.println("updateSeatmap: " + sessionIdNeededToUpdate);
+                
+                if (sessionIdNeededToUpdate.equals(sessionId)) {
+                    refreshPanel();
+                }
+            }
+        }
     }
 }
