@@ -1,0 +1,1409 @@
+{
+  "bookings" : [ {
+    "id" : "booking1",
+    "price" : 50.0,
+    "customer_id" : "customer1",
+    "session_id" : "session1",
+    "seat_id" : "seat2, seat3, seat40"
+  }, {
+    "id" : "booking2",
+    "price" : 35.0,
+    "customer_id" : "customer1",
+    "session_id" : "session1",
+    "seat_id" : "seat6, seat7"
+  }, {
+    "id" : "booking3",
+    "price" : 30.0,
+    "customer_id" : "customer1",
+    "session_id" : "session2",
+    "seat_id" : "seat1, seat3"
+  }, {
+    "id" : "booking4",
+    "price" : 15.0,
+    "customer_id" : "customer4",
+    "session_id" : "session2",
+    "seat_id" : "seat5"
+  }, {
+    "id" : "booking5",
+    "price" : 35.0,
+    "customer_id" : "customer5",
+    "session_id" : "session3",
+    "seat_id" : "seat4, seat8"
+  }, {
+    "id" : "booking6",
+    "price" : 20.0,
+    "customer_id" : "customer5",
+    "session_id" : "session3",
+    "seat_id" : "seat7"
+  }, {
+    "id" : "booking7",
+    "price" : 30.0,
+    "customer_id" : "customer8",
+    "session_id" : "session4",
+    "seat_id" : "seat5, seat6"
+  }, {
+    "id" : "booking8",
+    "price" : 20.0,
+    "customer_id" : "customer8",
+    "session_id" : "session4",
+    "seat_id" : "seat10"
+  }, {
+    "id" : "booking9",
+    "price" : 35.0,
+    "customer_id" : "customer8",
+    "session_id" : "session5",
+    "seat_id" : "seat8, seat9"
+  }, {
+    "id" : "booking10",
+    "price" : 20.0,
+    "customer_id" : "customer8",
+    "session_id" : "session5",
+    "seat_id" : "seat12"
+  }, {
+    "id" : "booking11",
+    "price" : 35.0,
+    "customer_id" : "customer11",
+    "session_id" : "session6",
+    "seat_id" : "seat10, seat12"
+  }, {
+    "id" : "booking12",
+    "price" : 20.0,
+    "customer_id" : "customer12",
+    "session_id" : "session6",
+    "seat_id" : "seat14"
+  }, {
+    "id" : "booking13",
+    "price" : 35.0,
+    "customer_id" : "customer13",
+    "session_id" : "session7",
+    "seat_id" : "seat16, seat18"
+  }, {
+    "id" : "booking14",
+    "price" : 20.0,
+    "customer_id" : "customer14",
+    "session_id" : "session7",
+    "seat_id" : "seat20"
+  }, {
+    "id" : "booking15",
+    "price" : 35.0,
+    "customer_id" : "customer15",
+    "session_id" : "session8",
+    "seat_id" : "seat22, seat24"
+  }, {
+    "id" : "booking16",
+    "price" : 20.0,
+    "customer_id" : "customer16",
+    "session_id" : "session8",
+    "seat_id" : "seat26"
+  }, {
+    "id" : "booking17",
+    "price" : 35.0,
+    "customer_id" : "customer17",
+    "session_id" : "session9",
+    "seat_id" : "seat28, seat30"
+  }, {
+    "id" : "booking18",
+    "price" : 20.0,
+    "customer_id" : "customer18",
+    "session_id" : "session9",
+    "seat_id" : "seat32"
+  }, {
+    "id" : "booking19",
+    "price" : 35.0,
+    "customer_id" : "customer19",
+    "session_id" : "session10",
+    "seat_id" : "seat34, seat36"
+  }, {
+    "id" : "booking20",
+    "price" : 20.0,
+    "customer_id" : "customer20",
+    "session_id" : "session10",
+    "seat_id" : "seat38"
+  }, {
+    "id" : "booking21",
+    "price" : 30.0,
+    "customer_id" : "customer21",
+    "session_id" : "session11",
+    "seat_id" : "seat2, seat4"
+  }, {
+    "id" : "booking22",
+    "price" : 15.0,
+    "customer_id" : "customer22",
+    "session_id" : "session11",
+    "seat_id" : "seat6"
+  }, {
+    "id" : "booking23",
+    "price" : 30.0,
+    "customer_id" : "customer23",
+    "session_id" : "session12",
+    "seat_id" : "seat1, seat3"
+  }, {
+    "id" : "booking24",
+    "price" : 15.0,
+    "customer_id" : "customer24",
+    "session_id" : "session12",
+    "seat_id" : "seat5"
+  }, {
+    "id" : "booking25",
+    "price" : 35.0,
+    "customer_id" : "customer25",
+    "session_id" : "session13",
+    "seat_id" : "seat4, seat8"
+  }, {
+    "id" : "booking26",
+    "price" : 20.0,
+    "customer_id" : "customer26",
+    "session_id" : "session13",
+    "seat_id" : "seat7"
+  }, {
+    "id" : "booking27",
+    "price" : 30.0,
+    "customer_id" : "customer27",
+    "session_id" : "session14",
+    "seat_id" : "seat5, seat6"
+  }, {
+    "id" : "booking28",
+    "price" : 20.0,
+    "customer_id" : "customer28",
+    "session_id" : "session14",
+    "seat_id" : "seat10"
+  }, {
+    "id" : "booking29",
+    "price" : 35.0,
+    "customer_id" : "customer29",
+    "session_id" : "session15",
+    "seat_id" : "seat8, seat9"
+  }, {
+    "id" : "booking30",
+    "price" : 20.0,
+    "customer_id" : "customer30",
+    "session_id" : "session15",
+    "seat_id" : "seat12"
+  }, {
+    "id" : "booking31",
+    "price" : 35.0,
+    "customer_id" : "customer1",
+    "session_id" : "session3",
+    "seat_id" : "seat22, seat30"
+  }, {
+    "id" : "booking32",
+    "price" : 70.0,
+    "customer_id" : "customer1",
+    "session_id" : "session3",
+    "seat_id" : "seat20, seat21, seat29, seat28"
+  }, {
+    "id" : "booking33",
+    "price" : 70.0,
+    "customer_id" : "customer5",
+    "session_id" : "session4",
+    "seat_id" : "seat20, seat28, seat29, seat21"
+  }, {
+    "id" : "booking34",
+    "price" : 35.0,
+    "customer_id" : "customer13",
+    "session_id" : "session1",
+    "seat_id" : "seat21, seat29"
+  }, {
+    "id" : "booking35",
+    "price" : 40.0,
+    "customer_id" : "customer1",
+    "session_id" : "session6",
+    "seat_id" : "seat36, seat28"
+  }, {
+    "id" : "booking36",
+    "price" : 35.0,
+    "customer_id" : "customer1",
+    "session_id" : "session16",
+    "seat_id" : "seat28, seat20"
+  }, {
+    "id" : "booking37",
+    "price" : 40.0,
+    "customer_id" : "customer1",
+    "session_id" : "session6",
+    "seat_id" : "seat35, seat27"
+  }, {
+    "id" : "booking38",
+    "price" : 40.0,
+    "customer_id" : "customer1",
+    "session_id" : "session15",
+    "seat_id" : "seat28, seat29"
+  }, {
+    "id" : "booking39",
+    "price" : 35.0,
+    "customer_id" : "customer1",
+    "session_id" : "session26",
+    "seat_id" : "seat20, seat28"
+  }, {
+    "id" : "booking40",
+    "price" : 55.0,
+    "customer_id" : "customer5",
+    "session_id" : "session26",
+    "seat_id" : "seat22, seat30, seat31"
+  }, {
+    "id" : "booking41",
+    "price" : 35.0,
+    "customer_id" : "customer14",
+    "session_id" : "session24",
+    "seat_id" : "seat28, seat20"
+  }, {
+    "id" : "booking42",
+    "price" : 35.0,
+    "customer_id" : "customer5",
+    "session_id" : "session12",
+    "seat_id" : "seat20, seat28"
+  }, {
+    "id" : "booking43",
+    "price" : 35.0,
+    "customer_id" : "customer1",
+    "session_id" : "session11",
+    "seat_id" : "seat32, seat23"
+  }, {
+    "id" : "booking44",
+    "price" : 35.0,
+    "customer_id" : "customer5",
+    "session_id" : "session12",
+    "seat_id" : "seat24, seat32"
+  }, {
+    "id" : "booking45",
+    "price" : 55.0,
+    "customer_id" : "customer5",
+    "session_id" : "session12",
+    "seat_id" : "seat17, seat25, seat26"
+  }, {
+    "id" : "booking46",
+    "price" : 50.0,
+    "customer_id" : "customer14",
+    "session_id" : "session11",
+    "seat_id" : "seat19, seat20, seat28"
+  }, {
+    "id" : "booking47",
+    "price" : 35.0,
+    "customer_id" : "customer5",
+    "session_id" : "session28",
+    "seat_id" : "seat28, seat20"
+  }, {
+    "id" : "booking48",
+    "price" : 35.0,
+    "customer_id" : "customer14",
+    "session_id" : "session24",
+    "seat_id" : "seat17, seat25"
+  }, {
+    "id" : "booking49",
+    "price" : 30.0,
+    "customer_id" : "customer14",
+    "session_id" : "session24",
+    "seat_id" : "seat18, seat19"
+  }, {
+    "id" : "booking50",
+    "price" : 40.0,
+    "customer_id" : "customer14",
+    "session_id" : "session10",
+    "seat_id" : "seat27, seat35"
+  }, {
+    "id" : "booking51",
+    "price" : 35.0,
+    "customer_id" : "customer14",
+    "session_id" : "session21",
+    "seat_id" : "seat20, seat28"
+  }, {
+    "id" : "booking52",
+    "price" : 30.0,
+    "customer_id" : "customer14",
+    "session_id" : "session24",
+    "seat_id" : "seat21, seat22"
+  }, {
+    "id" : "booking53",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session24",
+    "seat_id" : "seat31"
+  }, {
+    "id" : "booking54",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session21",
+    "seat_id" : "seat40"
+  }, {
+    "id" : "booking55",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session16",
+    "seat_id" : "seat32"
+  }, {
+    "id" : "booking56",
+    "price" : 15.0,
+    "customer_id" : "customer1",
+    "session_id" : "session25",
+    "seat_id" : "seat1"
+  }, {
+    "id" : "booking57",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session19",
+    "seat_id" : "seat32"
+  }, {
+    "id" : "booking58",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session17",
+    "seat_id" : "seat40"
+  }, {
+    "id" : "booking59",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session15",
+    "seat_id" : "seat40"
+  }, {
+    "id" : "booking60",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session25",
+    "seat_id" : "seat40"
+  }, {
+    "id" : "booking61",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session1",
+    "seat_id" : "seat32"
+  }, {
+    "id" : "booking62",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session17",
+    "seat_id" : "seat39"
+  }, {
+    "id" : "booking63",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session26",
+    "seat_id" : "seat40"
+  }, {
+    "id" : "booking64",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session4",
+    "seat_id" : "seat40"
+  }, {
+    "id" : "booking65",
+    "price" : 15.0,
+    "customer_id" : "customer1",
+    "session_id" : "session15",
+    "seat_id" : "seat24"
+  }, {
+    "id" : "booking66",
+    "price" : 15.0,
+    "customer_id" : "customer1",
+    "session_id" : "session4",
+    "seat_id" : "seat1"
+  }, {
+    "id" : "booking67",
+    "price" : 15.0,
+    "customer_id" : "customer1",
+    "session_id" : "session4",
+    "seat_id" : "seat18"
+  }, {
+    "id" : "booking68",
+    "price" : 15.0,
+    "customer_id" : "customer1",
+    "session_id" : "session26",
+    "seat_id" : "seat1"
+  }, {
+    "id" : "booking69",
+    "price" : 35.0,
+    "customer_id" : "customer1",
+    "session_id" : "session24",
+    "seat_id" : "seat1, seat40"
+  }, {
+    "id" : "booking70",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session24",
+    "seat_id" : "seat32"
+  }, {
+    "id" : "booking71",
+    "price" : 30.0,
+    "customer_id" : "customer1",
+    "session_id" : "session20",
+    "seat_id" : "seat9, seat17"
+  }, {
+    "id" : "booking72",
+    "price" : 40.0,
+    "customer_id" : "customer14",
+    "session_id" : "session20",
+    "seat_id" : "seat27, seat35"
+  }, {
+    "id" : "booking73",
+    "price" : 40.0,
+    "customer_id" : "customer23",
+    "session_id" : "session3",
+    "seat_id" : "seat40, seat32"
+  }, {
+    "id" : "booking74",
+    "price" : 40.0,
+    "customer_id" : "customer1",
+    "session_id" : "session4",
+    "seat_id" : "seat26, seat34"
+  }, {
+    "id" : "booking75",
+    "price" : 20.0,
+    "customer_id" : "customer1",
+    "session_id" : "session4",
+    "seat_id" : "seat25"
+  }, {
+    "id" : "booking76",
+    "price" : 70.0,
+    "customer_id" : "customer14",
+    "session_id" : "session20",
+    "seat_id" : "seat22, seat23, seat30, seat29"
+  }, {
+    "id" : "booking77",
+    "price" : 70.0,
+    "customer_id" : "customer5",
+    "session_id" : "session4",
+    "seat_id" : "seat32, seat23, seat22, seat30"
+  } ],
+  "seats" : [ {
+    "id" : "seat1",
+    "position" : "A1",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat2",
+    "position" : "A2",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat3",
+    "position" : "A3",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat4",
+    "position" : "A4",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat5",
+    "position" : "A5",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat6",
+    "position" : "A6",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat7",
+    "position" : "A7",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat8",
+    "position" : "A8",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat9",
+    "position" : "B1",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat10",
+    "position" : "B2",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat11",
+    "position" : "B3",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat12",
+    "position" : "B4",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat13",
+    "position" : "B5",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat14",
+    "position" : "B6",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat15",
+    "position" : "B7",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat16",
+    "position" : "B8",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat17",
+    "position" : "C1",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat18",
+    "position" : "C2",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat19",
+    "position" : "C3",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat20",
+    "position" : "C4",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat21",
+    "position" : "C5",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat22",
+    "position" : "C6",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat23",
+    "position" : "C7",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat24",
+    "position" : "C8",
+    "type" : "Regular",
+    "price" : 15.0
+  }, {
+    "id" : "seat25",
+    "position" : "D1",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat26",
+    "position" : "D2",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat27",
+    "position" : "D3",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat28",
+    "position" : "D4",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat29",
+    "position" : "D5",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat30",
+    "position" : "D6",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat31",
+    "position" : "D7",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat32",
+    "position" : "D8",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat33",
+    "position" : "E1",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat34",
+    "position" : "E2",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat35",
+    "position" : "E3",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat36",
+    "position" : "E4",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat37",
+    "position" : "E5",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat38",
+    "position" : "E6",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat39",
+    "position" : "E7",
+    "type" : "VIP",
+    "price" : 20.0
+  }, {
+    "id" : "seat40",
+    "position" : "E8",
+    "type" : "VIP",
+    "price" : 20.0
+  } ],
+  "movies" : [ {
+    "id" : "movie1",
+    "title" : "The Matrix",
+    "genre" : "Sci-Fi",
+    "image" : "The Matrix.png"
+  }, {
+    "id" : "movie2",
+    "title" : "Inception",
+    "genre" : "Sci-Fi",
+    "image" : "Inception.png"
+  }, {
+    "id" : "movie3",
+    "title" : "The Dark Knight",
+    "genre" : "Action",
+    "image" : "The Dark Knight.png"
+  }, {
+    "id" : "movie4",
+    "title" : "Interstellar",
+    "genre" : "Sci-Fi",
+    "image" : "Interstellar.png"
+  }, {
+    "id" : "movie5",
+    "title" : "Pulp Fiction",
+    "genre" : "Crime",
+    "image" : "Pulp Fiction.png"
+  }, {
+    "id" : "movie6",
+    "title" : "Forrest Gump",
+    "genre" : "Drama",
+    "image" : "Forrest Gump.png"
+  }, {
+    "id" : "movie7",
+    "title" : "The Shawshank Redemption",
+    "genre" : "Drama",
+    "image" : "The Shawshank Redemption.png"
+  }, {
+    "id" : "movie8",
+    "title" : "Fight Club",
+    "genre" : "Drama",
+    "image" : "Fight Club.png"
+  }, {
+    "id" : "movie9",
+    "title" : "The Godfather",
+    "genre" : "Crime",
+    "image" : "The Godfather.png"
+  }, {
+    "id" : "movie10",
+    "title" : "The Lord of the Rings The Return of the King",
+    "genre" : "Fantasy",
+    "image" : "The Lord of the Rings The Return of the King.png"
+  }, {
+    "id" : "movie11",
+    "title" : "The Avengers",
+    "genre" : "Action, Sci-Fi",
+    "image" : "The Avengers.png"
+  }, {
+    "id" : "movie12",
+    "title" : "Guardians of the Galaxy",
+    "genre" : "Action, Sci-Fi",
+    "image" : "Guardians of the Galaxy.png"
+  }, {
+    "id" : "movie13",
+    "title" : "The Silence of the Lambs",
+    "genre" : "Crime, Drama, Thriller",
+    "image" : "The Silence of the Lambs.png"
+  }, {
+    "id" : "movie14",
+    "title" : "Titanic",
+    "genre" : "Drama, Romance",
+    "image" : "Titanic.png"
+  }, {
+    "id" : "movie15",
+    "title" : "Avatar",
+    "genre" : "Action, Adventure, Sci-Fi",
+    "image" : "Avatar.png"
+  }, {
+    "id" : "movie16",
+    "title" : "Jurassic Park",
+    "genre" : "Adventure, Sci-Fi",
+    "image" : "Jurassic Park.png"
+  }, {
+    "id" : "movie17",
+    "title" : "Star Wars Episode IV - A New Hope",
+    "genre" : "Action, Adventure, Fantasy",
+    "image" : "Star Wars Episode IV - A New Hope.png"
+  }, {
+    "id" : "movie18",
+    "title" : "The Lion King",
+    "genre" : "Animation, Adventure, Drama",
+    "image" : "The Lion King.png"
+  }, {
+    "id" : "movie19",
+    "title" : "Gladiator",
+    "genre" : "Action, Adventure, Drama",
+    "image" : "Gladiator.png"
+  }, {
+    "id" : "movie20",
+    "title" : "Braveheart",
+    "genre" : "Biography, Drama, History",
+    "image" : "Braveheart.png"
+  }, {
+    "id" : "movie21",
+    "title" : "The Departed",
+    "genre" : "Crime, Drama, Thriller",
+    "image" : "The Departed.png"
+  }, {
+    "id" : "movie22",
+    "title" : "Goodfellas",
+    "genre" : "Biography, Crime, Drama",
+    "image" : "Goodfellas.png"
+  }, {
+    "id" : "movie23",
+    "title" : "Mad Max Fury Road",
+    "genre" : "Action, Adventure, Sci-Fi",
+    "image" : "Mad Max Fury Road.png"
+  }, {
+    "id" : "movie24",
+    "title" : "The Prestige",
+    "genre" : "Drama, Mystery, Sci-Fi",
+    "image" : "The Prestige.png"
+  }, {
+    "id" : "movie25",
+    "title" : "Schindler's List",
+    "genre" : "Biography, Drama, History",
+    "image" : "Schindler's List.png"
+  }, {
+    "id" : "movie26",
+    "title" : "Back to the Future",
+    "genre" : "Adventure, Comedy, Sci-Fi",
+    "image" : "Back to the Future.png"
+  }, {
+    "id" : "movie27",
+    "title" : "The Sixth Sense",
+    "genre" : "Drama, Mystery, Thriller",
+    "image" : "The Sixth Sense.png"
+  }, {
+    "id" : "movie28",
+    "title" : "Saving Private Ryan",
+    "genre" : "Drama, War",
+    "image" : "Saving Private Ryan.png"
+  }, {
+    "id" : "movie29",
+    "title" : "The Green Mile",
+    "genre" : "Crime, Drama, Fantasy",
+    "image" : "The Green Mile.png"
+  }, {
+    "id" : "movie30",
+    "title" : "The Truman Show",
+    "genre" : "Comedy, Drama, Sci-Fi",
+    "image" : "The Truman Show.png"
+  }, {
+    "id" : "movie31",
+    "title" : "Se7en",
+    "genre" : "Crime, Drama, Mystery",
+    "image" : ""
+  }, {
+    "id" : "movie32",
+    "title" : "Django Unchained",
+    "genre" : "Drama, Western",
+    "image" : ""
+  }, {
+    "id" : "movie33",
+    "title" : "The Wolf of Wall Street",
+    "genre" : "Biography, Comedy, Crime",
+    "image" : ""
+  }, {
+    "id" : "movie34",
+    "title" : "The Social Network",
+    "genre" : "Biography, Drama",
+    "image" : ""
+  }, {
+    "id" : "movie35",
+    "title" : "The Grand Budapest Hotel",
+    "genre" : "Adventure, Comedy, Crime",
+    "image" : ""
+  }, {
+    "id" : "movie36",
+    "title" : "Whiplash",
+    "genre" : "Drama, Music",
+    "image" : ""
+  }, {
+    "id" : "movie37",
+    "title" : "La La Land",
+    "genre" : "Comedy, Drama, Music",
+    "image" : ""
+  }, {
+    "id" : "movie38",
+    "title" : "Parasite",
+    "genre" : "Comedy, Drama, Thriller",
+    "image" : ""
+  }, {
+    "id" : "movie39",
+    "title" : "Jojo Rabbit",
+    "genre" : "Comedy, Drama, War",
+    "image" : ""
+  }, {
+    "id" : "movie40",
+    "title" : "Blade Runner 2049",
+    "genre" : "Action, Drama, Mystery",
+    "image" : ""
+  }, {
+    "id" : "movie41",
+    "title" : "Her",
+    "genre" : "Drama, Romance, Sci-Fi",
+    "image" : ""
+  }, {
+    "id" : "movie42",
+    "title" : "The Revenant",
+    "genre" : "Action, Adventure, Drama",
+    "image" : ""
+  }, {
+    "id" : "movie43",
+    "title" : "A Beautiful Mind",
+    "genre" : "Biography, Drama",
+    "image" : ""
+  }, {
+    "id" : "movie44",
+    "title" : "The Big Short",
+    "genre" : "Biography, Comedy, Drama",
+    "image" : ""
+  }, {
+    "id" : "movie45",
+    "title" : "Slumdog Millionaire",
+    "genre" : "Drama, Romance",
+    "image" : ""
+  }, {
+    "id" : "movie46",
+    "title" : "The Imitation Game",
+    "genre" : "Biography, Drama, Thriller",
+    "image" : ""
+  }, {
+    "id" : "movie47",
+    "title" : "Eternal Sunshine of the Spotless Mind",
+    "genre" : "Drama, Romance, Sci-Fi",
+    "image" : ""
+  }, {
+    "id" : "movie48",
+    "title" : "Shutter Island",
+    "genre" : "Mystery, Thriller",
+    "image" : ""
+  }, {
+    "id" : "movie49",
+    "title" : "The Pursuit of Happyness",
+    "genre" : "Biography, Drama",
+    "image" : ""
+  }, {
+    "id" : "movie50",
+    "title" : "Life of Pi",
+    "genre" : "Adventure, Drama, Fantasy",
+    "image" : ""
+  } ],
+  "sessions" : [ {
+    "id" : "session15",
+    "datetime" : "2024-06-20T11:30:00",
+    "movie_id" : "movie6",
+    "booked_seats" : [ "seat8", "seat9", "seat12", "seat28", "seat29" ]
+  }, {
+    "id" : "session59",
+    "datetime" : "2024-06-23T13:30:00",
+    "movie_id" : "movie20",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session16",
+    "datetime" : "2024-06-20T13:30:00",
+    "movie_id" : "movie7",
+    "booked_seats" : [ "seat28", "seat20" ]
+  }, {
+    "id" : "session13",
+    "datetime" : "2024-06-19T17:30:00",
+    "movie_id" : "movie6",
+    "booked_seats" : [ "seat4", "seat7", "seat8" ]
+  }, {
+    "id" : "session57",
+    "datetime" : "2024-06-24T21:30:00",
+    "movie_id" : "movie19",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session14",
+    "datetime" : "2024-06-19T09:30:00",
+    "movie_id" : "movie6",
+    "booked_seats" : [ "seat5", "seat6", "seat10" ]
+  }, {
+    "id" : "session58",
+    "datetime" : "2024-06-23T07:30:00",
+    "movie_id" : "movie20",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session19",
+    "datetime" : "2024-06-20T19:30:00",
+    "movie_id" : "movie8",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session17",
+    "datetime" : "2024-06-20T15:30:00",
+    "movie_id" : "movie7",
+    "booked_seats" : [ "seat39", "seat40" ]
+  }, {
+    "id" : "session18",
+    "datetime" : "2024-06-20T17:30:00",
+    "movie_id" : "movie8",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session51",
+    "datetime" : "2024-06-24T21:30:00",
+    "movie_id" : "movie18",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session52",
+    "datetime" : "2024-06-23T07:30:00",
+    "movie_id" : "movie19",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session50",
+    "datetime" : "2024-06-24T15:30:00",
+    "movie_id" : "movie18",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session55",
+    "datetime" : "2024-06-24T09:30:00",
+    "movie_id" : "movie19",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session11",
+    "datetime" : "2024-06-19T15:30:00",
+    "movie_id" : "movie5",
+    "booked_seats" : [ "seat2", "seat4", "seat6", "seat32", "seat23", "seat28", "seat19", "seat20" ]
+  }, {
+    "id" : "session56",
+    "datetime" : "2024-06-24T15:30:00",
+    "movie_id" : "movie19",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session12",
+    "datetime" : "2024-06-19T07:30:00",
+    "movie_id" : "movie5",
+    "booked_seats" : [ "seat1", "seat3", "seat5", "seat20", "seat28", "seat20", "seat28", "seat24", "seat17", "seat25", "seat26" ]
+  }, {
+    "id" : "session53",
+    "datetime" : "2024-06-23T13:30:00",
+    "movie_id" : "movie19",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session54",
+    "datetime" : "2024-06-23T19:30:00",
+    "movie_id" : "movie19",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session10",
+    "datetime" : "2024-06-19T13:30:00",
+    "movie_id" : "movie4",
+    "booked_seats" : [ "seat34", "seat36", "seat38", "seat27", "seat35" ]
+  }, {
+    "id" : "session48",
+    "datetime" : "2024-06-23T19:30:00",
+    "movie_id" : "movie18",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session49",
+    "datetime" : "2024-06-24T09:30:00",
+    "movie_id" : "movie18",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session46",
+    "datetime" : "2024-06-23T07:30:00",
+    "movie_id" : "movie18",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session47",
+    "datetime" : "2024-06-23T13:30:00",
+    "movie_id" : "movie18",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session40",
+    "datetime" : "2024-06-23T07:30:00",
+    "movie_id" : "movie17",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session41",
+    "datetime" : "2024-06-23T13:30:00",
+    "movie_id" : "movie17",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session44",
+    "datetime" : "2024-06-24T15:30:00",
+    "movie_id" : "movie17",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session45",
+    "datetime" : "2024-06-24T21:30:00",
+    "movie_id" : "movie17",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session42",
+    "datetime" : "2024-06-23T19:30:00",
+    "movie_id" : "movie17",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session43",
+    "datetime" : "2024-06-24T09:30:00",
+    "movie_id" : "movie17",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session37",
+    "datetime" : "2024-06-24T09:30:00",
+    "movie_id" : "movie16",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session38",
+    "datetime" : "2024-06-24T15:30:00",
+    "movie_id" : "movie16",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session35",
+    "datetime" : "2024-06-23T13:30:00",
+    "movie_id" : "movie16",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session36",
+    "datetime" : "2024-06-23T19:30:00",
+    "movie_id" : "movie16",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session39",
+    "datetime" : "2024-06-24T21:30:00",
+    "movie_id" : "movie16",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session30",
+    "datetime" : "2024-06-22T09:30:00",
+    "movie_id" : "movie14",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session33",
+    "datetime" : "2024-06-22T15:30:00",
+    "movie_id" : "movie15",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session34",
+    "datetime" : "2024-06-23T07:30:00",
+    "movie_id" : "movie16",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session31",
+    "datetime" : "2024-06-22T11:30:00",
+    "movie_id" : "movie14",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session32",
+    "datetime" : "2024-06-22T13:30:00",
+    "movie_id" : "movie15",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session9",
+    "datetime" : "2024-06-18T21:30:00",
+    "movie_id" : "movie4",
+    "booked_seats" : [ "seat28", "seat30", "seat32" ]
+  }, {
+    "id" : "session8",
+    "datetime" : "2024-06-18T11:30:00",
+    "movie_id" : "movie3",
+    "booked_seats" : [ "seat22", "seat24", "seat26" ]
+  }, {
+    "id" : "session7",
+    "datetime" : "2024-06-18T09:30:00",
+    "movie_id" : "movie3",
+    "booked_seats" : [ "seat16", "seat18", "seat20" ]
+  }, {
+    "id" : "session6",
+    "datetime" : "2024-06-18T15:30:00",
+    "movie_id" : "movie3",
+    "booked_seats" : [ "seat10", "seat12", "seat14", "seat36", "seat28", "seat35", "seat27" ]
+  }, {
+    "id" : "session26",
+    "datetime" : "2024-06-21T17:30:00",
+    "movie_id" : "movie12",
+    "booked_seats" : [ "seat20", "seat28", "seat22", "seat30", "seat31", "seat1" ]
+  }, {
+    "id" : "session5",
+    "datetime" : "2024-06-18T07:30:00",
+    "movie_id" : "movie2",
+    "booked_seats" : [ "seat8", "seat9", "seat12" ]
+  }, {
+    "id" : "session4",
+    "datetime" : "2024-06-17T11:30:00",
+    "movie_id" : "movie2",
+    "booked_seats" : [ "seat5", "seat6", "seat10", "seat20", "seat28", "seat29", "seat21", "seat1", "seat18", "seat26", "seat34", "seat25", "seat32", "seat23", "seat22", "seat30" ]
+  }, {
+    "id" : "session27",
+    "datetime" : "2024-06-21T19:30:00",
+    "movie_id" : "movie12",
+    "booked_seats" : [ "seat20", "seat28", "seat34", "seat21" ]
+  }, {
+    "id" : "session24",
+    "datetime" : "2024-06-21T13:30:00",
+    "movie_id" : "movie11",
+    "booked_seats" : [ "seat28", "seat20", "seat18", "seat19", "seat21", "seat22", "seat1", "seat40", "seat32" ]
+  }, {
+    "id" : "session3",
+    "datetime" : "2024-06-17T09:30:00",
+    "movie_id" : "movie2",
+    "booked_seats" : [ "seat4", "seat7", "seat8", "seat22", "seat30", "seat20", "seat21", "seat29", "seat28", "seat40", "seat32" ]
+  }, {
+    "id" : "session25",
+    "datetime" : "2024-06-21T15:30:00",
+    "movie_id" : "movie11",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session2",
+    "datetime" : "2024-06-17T07:30:00",
+    "movie_id" : "movie1",
+    "booked_seats" : [ "seat1", "seat3", "seat5" ]
+  }, {
+    "id" : "session1",
+    "datetime" : "2024-06-17T21:30:00",
+    "movie_id" : "movie1",
+    "booked_seats" : [ "seat2", "seat3", "seat6", "seat7", "seat40", "seat21", "seat29" ]
+  }, {
+    "id" : "session28",
+    "datetime" : "2024-06-21T21:30:00",
+    "movie_id" : "movie13",
+    "booked_seats" : [ "seat28", "seat20" ]
+  }, {
+    "id" : "session29",
+    "datetime" : "2024-06-22T07:30:00",
+    "movie_id" : "movie13",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session62",
+    "datetime" : "2024-06-24T15:30:00",
+    "movie_id" : "movie20",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session63",
+    "datetime" : "2024-06-24T21:30:00",
+    "movie_id" : "movie20",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session60",
+    "datetime" : "2024-06-23T19:30:00",
+    "movie_id" : "movie20",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session61",
+    "datetime" : "2024-06-24T09:30:00",
+    "movie_id" : "movie20",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session22",
+    "datetime" : "2024-06-21T09:30:00",
+    "movie_id" : "movie10",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session23",
+    "datetime" : "2024-06-21T11:30:00",
+    "movie_id" : "movie10",
+    "booked_seats" : [ ]
+  }, {
+    "id" : "session20",
+    "datetime" : "2024-06-20T21:30:00",
+    "movie_id" : "movie9",
+    "booked_seats" : [ "seat9", "seat17", "seat27", "seat35", "seat22", "seat23", "seat30", "seat29" ]
+  }, {
+    "id" : "session21",
+    "datetime" : "2024-06-21T07:30:00",
+    "movie_id" : "movie9",
+    "booked_seats" : [ "seat20", "seat28" ]
+  } ],
+  "customers" : [ {
+    "id" : "customer14",
+    "name" : "Nina Dobrev",
+    "password" : "ninaPass123",
+    "phone" : "2233445567"
+  }, {
+    "id" : "customer13",
+    "name" : "Michael Jordan",
+    "password" : "michaelPass123",
+    "phone" : "1122334466"
+  }, {
+    "id" : "customer16",
+    "name" : "Penelope Cruz",
+    "password" : "penelopePass123",
+    "phone" : "4455667789"
+  }, {
+    "id" : "customer15",
+    "name" : "Oscar Wilde",
+    "password" : "oscarPass123",
+    "phone" : "3344556678"
+  }, {
+    "id" : "customer18",
+    "name" : "Rachel Green",
+    "password" : "rachelPass123",
+    "phone" : "6677889901"
+  }, {
+    "id" : "customer17",
+    "name" : "Quentin Tarantino",
+    "password" : "quentinPass123",
+    "phone" : "5566778890"
+  }, {
+    "id" : "customer19",
+    "name" : "Samuel Jackson",
+    "password" : "samuelPass123",
+    "phone" : "7788990012"
+  }, {
+    "id" : "customer8",
+    "name" : "Hannah Montana",
+    "password" : "hannahPass123",
+    "phone" : "6677889900"
+  }, {
+    "id" : "customer9",
+    "name" : "Ian Somerhalder",
+    "password" : "ianPass123",
+    "phone" : "7788990011"
+  }, {
+    "id" : "customer6",
+    "name" : "Fiona Gallagher",
+    "password" : "fionaPass123",
+    "phone" : "4455667788"
+  }, {
+    "id" : "customer7",
+    "name" : "George Clooney",
+    "password" : "georgePass123",
+    "phone" : "5566778899"
+  }, {
+    "id" : "customer4",
+    "name" : "Diana Prince",
+    "password" : "dianaPass123",
+    "phone" : "2233445566"
+  }, {
+    "id" : "customer5",
+    "name" : "Ethan Hunt",
+    "password" : "ethanPass123",
+    "phone" : "3344556677"
+  }, {
+    "id" : "customer2",
+    "name" : "Bob Johnson",
+    "password" : "bobPass123",
+    "phone" : "0987654321"
+  }, {
+    "id" : "customer3",
+    "name" : "Charlie Brown",
+    "password" : "charliePass123",
+    "phone" : "1122334455"
+  }, {
+    "id" : "customer21",
+    "name" : "Uma Thurman",
+    "password" : "umaPass123",
+    "phone" : "9900112234"
+  }, {
+    "id" : "customer1",
+    "name" : "Alice Smith",
+    "password" : "alicePass123",
+    "phone" : "1234567890"
+  }, {
+    "id" : "customer20",
+    "name" : "Tina Turner",
+    "password" : "tinaPass123",
+    "phone" : "8899001123"
+  }, {
+    "id" : "customer23",
+    "name" : "Will Smith",
+    "password" : "willPass123",
+    "phone" : "1122334467"
+  }, {
+    "id" : "customer22",
+    "name" : "Viggo Mortensen",
+    "password" : "viggoPass123",
+    "phone" : "0011223355"
+  }, {
+    "id" : "customer25",
+    "name" : "Yvonne Strahovski",
+    "password" : "yvonnePass123",
+    "phone" : "3344556679"
+  }, {
+    "id" : "customer24",
+    "name" : "Xena Warrior",
+    "password" : "xenaPass123",
+    "phone" : "2233445568"
+  }, {
+    "id" : "customer27",
+    "name" : "Adam Levine",
+    "password" : "adamPass123",
+    "phone" : "5566778891"
+  }, {
+    "id" : "customer26",
+    "name" : "Zachary Levi",
+    "password" : "zacharyPass123",
+    "phone" : "4455667780"
+  }, {
+    "id" : "customer29",
+    "name" : "Chris Hemsworth",
+    "password" : "chrisPass123",
+    "phone" : "7788990013"
+  }, {
+    "id" : "customer28",
+    "name" : "Betty White",
+    "password" : "bettyPass123",
+    "phone" : "6677889902"
+  }, {
+    "id" : "customer30",
+    "name" : "David Tennant",
+    "password" : "davidPass123",
+    "phone" : "8899001124"
+  }, {
+    "id" : "customer10",
+    "name" : "Jane Austen",
+    "password" : "janePass123",
+    "phone" : "8899001122"
+  }, {
+    "id" : "customer12",
+    "name" : "Laura Croft",
+    "password" : "lauraPass123",
+    "phone" : "0011223344"
+  }, {
+    "id" : "customer11",
+    "name" : "Kevin Hart",
+    "password" : "kevinPass123",
+    "phone" : "9900112233"
+  }, {
+    "id" : "customer31",
+    "name" : "Alice Dan",
+    "password" : "123",
+    "phone" : "098478393448"
+  }, {
+    "id" : "customer32",
+    "name" : "Alice Mad",
+    "password" : "123",
+    "phone" : "03984748334"
+  }, {
+    "id" : "customer33",
+    "name" : "Adam Smith",
+    "password" : "adam",
+    "phone" : "0984783434"
+  }, {
+    "id" : "customer34",
+    "name" : "Adam Taylor",
+    "password" : "123adam",
+    "phone" : "094743846"
+  }, {
+    "id" : "customer35",
+    "name" : "Athen H",
+    "password" : "athen",
+    "phone" : "0836278324"
+  } ]
+}
